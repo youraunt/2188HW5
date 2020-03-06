@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/bkallen/Desktop/gDriveDB/2020/Spring/CSCI-2421 Data Structures/2188HW5/DictEntry.h
+string
+-
+
+/Users/bkallen/Desktop/gDriveDB/2020/Spring/CSCI-2421 Data Structures/2188HW5/dictionary.h
+list
+-
+iostream
+-
+fstream
+-
+DictEntry.h
+/Users/bkallen/Desktop/gDriveDB/2020/Spring/CSCI-2421 Data Structures/2188HW5/DictEntry.h
+
+/Users/bkallen/Desktop/gDriveDB/2020/Spring/CSCI-2421 Data Structures/2188HW5/functions.h
+algorithm
+-
+cassert
+-
+iostream
+-
+fstream
+-
+
+/Users/bkallen/Desktop/gDriveDB/2020/Spring/CSCI-2421 Data Structures/2188HW5/main.cpp
+DictEntry.h
+/Users/bkallen/Desktop/gDriveDB/2020/Spring/CSCI-2421 Data Structures/2188HW5/DictEntry.h
+dictionary.h
+/Users/bkallen/Desktop/gDriveDB/2020/Spring/CSCI-2421 Data Structures/2188HW5/dictionary.h
+functions.h
+/Users/bkallen/Desktop/gDriveDB/2020/Spring/CSCI-2421 Data Structures/2188HW5/functions.h
+
