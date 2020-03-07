@@ -14,7 +14,8 @@
 #include <cassert>
 #include <iostream>
 #include <fstream>
-
+#include "DictEntry.h"
+#include "dictionary.h"
 
 long getMemoryUsage();
 
@@ -41,11 +42,7 @@ inline void unknownInput() {
 
 std::string makeLowerCase(const std::string &in);
 
-std::string getString(std::ifstream &infile);
-
-
-std::string getSearch(std::string &userInput, const std::string &searchNumber);
-
+void toConsole(std::list<DictEntry> &wordList);
 
 bool loopProgram();
 

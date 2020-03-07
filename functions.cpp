@@ -55,6 +55,12 @@ std::string getFileName(int argc, char **argv, std::string &userInput, std::ifst
     return std::string(userInput);
 }///# getFileName
 
+void toConsole(std::list<DictEntry> &wordList) {
+    for (auto &i :wordList) {
+        std::cout << i.getWord() << " ";
+    }
+}
+
 /// @brief This function checks to see if the user wants to
 ///        run the program again
 /// @return capitalized user input

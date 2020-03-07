@@ -6,15 +6,23 @@
 //  Copyright © 2020 BK Allen. All rights reserved.
 //
 
+for (
+auto i = wordList.rbegin();
+i != wordList.
+
+rend();
+
+++i)
 
 #include "dictionary.h"
 
 Dictionary::Dictionary() = default;
 
 std::list<DictEntry>
-Dictionary::wordFile(const std::string &fileName, std::ifstream &infile, std::list<DictEntry> &list) {
-    wordType word;
+Dictionary::wordFile
+        (const std::string &fileName, std::ifstream &infile, std::list<DictEntry> &list) {
     assert(infile.is_open());
+    wordType word;
     do {
         infile >> word;
         auto *newEntry = new DictEntry;
@@ -25,29 +33,30 @@ Dictionary::wordFile(const std::string &fileName, std::ifstream &infile, std::li
 }
 
 int Dictionary::searchForward(std::list<DictEntry> &wordList, wordType &findString) {
-    auto wordFound = false;
-    auto searchCount = 0;
+    auto inDict = false;
+    auto count = 0;
     for (auto &i : wordList) {
-        searchCount += 1;
+        count += 1;
         if (i.getWord() == findString) {
-            wordFound = true;
+            inDict = true;
             break;
         }
     }
-    return wordFound ? searchCount : false;
+    return inDict ? count : false;
 }
 
 int Dictionary::searchBackward(std::list<DictEntry> &wordList, wordType &findString) {
-    auto wordFound = false;
-    auto searchCount = 0;
-    for (auto &i : wordList) {
-        searchCount += 1;
+    auto inDict = false;
+    auto count = 0;
+    /*for (auto i = wordList.rbegin(); i != wordList.rend(); ++i)*/
+    for (auto &i : boost::adaptors::reverse(wordList)) {
+        count += 1;
         if (i.getWord() == findString) {
-            wordFound = true;
+            inDict = true;
             break;
         }
     }
-    return wordFound ? searchCount : false;
+    return inDict ? count : false;
 }
 
 void Dictionary::revPrintList(std::ostream &output, std::list<DictEntry> &wordList) {
@@ -56,8 +65,4 @@ void Dictionary::revPrintList(std::ostream &output, std::list<DictEntry> &wordLi
     }
 }
 
-void Dictionary::displayList(std::list<DictEntry> &wordList) {
-    for (auto &i :wordList) {
-        std::cout << i.getWord() << " ";
-    }
-}
+

@@ -29,13 +29,16 @@ int main(int argc, char **argv) {
             std::string searchUserInput = getFileName(argc, argv, searchUserInput, infile1);
             dictionary = Dictionary::wordFile(dictionaryUserInput, infile, dictionary);
             std::cout << "\nDictionary contents: " << std::endl;
-            Dictionary::displayList(dictionary);
+            toConsole(dictionary);
             dictionary.sort();
+            std::cout << std::endl;
             std::cout << "\nSorted dictionary contents: " << std::endl;
-            Dictionary::displayList(dictionary);
+            toConsole(dictionary);
             toSearch = Dictionary::wordFile(searchUserInput, infile1, toSearch);
+            std::cout << std::endl;
             std::cout << "\nWords to search for:" << std::endl;
-            Dictionary::displayList(toSearch);
+            toConsole(toSearch);
+            std::cout << std::endl;
             auto wordToSearch = toSearch.begin();
             do {
                 auto temp = wordToSearch->getWord();

@@ -13,8 +13,7 @@
 #include <iostream>
 #include <fstream>
 #include "DictEntry.h"
-
-
+#include <boost/range/adaptor/reversed.hpp>
 class Dictionary {
 public:
     Dictionary();
@@ -33,8 +32,6 @@ public:
     /*Prints the list of words in reverse alphabetic order to a file*/
     static void revPrintList(std::ostream &output, std::list<DictEntry> &wordList);
 
-    /*Prints the list of words to the screen*/
-    static void displayList(std::list<DictEntry> &wordList);
 
 };
 
